@@ -26,7 +26,7 @@
         if (err) throw err;
         
         data.forEach(function(d) {
-          if(word_count[d['hashtag']]){
+          if(d['hashtag'] in word_count){
             word_count[d['hashtag']]+=1
           }else{
             word_count[d['hashtag']]=1
