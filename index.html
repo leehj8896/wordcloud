@@ -21,10 +21,10 @@
       //     .attr("transform",
       //           "translate(" + margin.left + "," + margin.top + ")");
 
-      var word_count = {};
       d3.csv('hashtags.csv', (err, data)=>{
         if (err) throw err;
         
+        var word_count = {};
         data.forEach(function(d) {
           if(d['hashtag'] in word_count){
             word_count[d['hashtag']]+=1
