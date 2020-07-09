@@ -20,7 +20,7 @@
     d3.csv("words.csv", function(d) {
         return {
           text: d.word,
-          size: +d.freq*weight/10
+          size: +d.freq*weight
         }
       },
       function(data) {
