@@ -17,7 +17,7 @@
         height = 500;
 
     var fill = d3.scale.category20();
-    d3.csv("words.csv", function(d) {
+    d3.csv("words1.csv", function(d) {
         return {
           text: d.word,
           size: d.freq*weight
