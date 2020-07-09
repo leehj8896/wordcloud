@@ -18,10 +18,9 @@
 
     var fill = d3.scale.category20();
     d3.csv("words.csv", function(d) {
-        console.log(+d.freq*weight/10)
         return {
           text: d.word,
-          size: +d.freq*weight/10
+          size: +(d.freq/10)*weight
         }
       },
       function(data) {
