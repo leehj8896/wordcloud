@@ -12,7 +12,7 @@
 <body>
   <div id="cloud"></div>
   <script type="text/javascript">
-    var weight = 3,   // change me
+    var weight = 1,   // change me
         width = 960,
         height = 500;
 
@@ -20,7 +20,7 @@
     d3.csv("words.csv", function(d) {
         return {
           text: d.word,
-          size: +parseInt(d.freq/10)*weight
+          size: +d.freq*weight
         }
       },
       function(data) {
