@@ -52,7 +52,11 @@
               })
             .text(function(d) { return d.text; })
             .on('click', function(d){
-              alert(d.text);
+              location.href=get_url(d.text);
+
+              function get_url(keyword){
+                return '34.105.4.168'
+              }
             });
         }
       });
