@@ -18,7 +18,7 @@
 
     var fill = d3.scale.category20();
     d3.csv(
-      "words1.csv", 
+      "words.csv", 
       function(d) {
         return {
           text: d.word,
@@ -50,7 +50,10 @@
               .attr("transform", function(d) {
                 return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
               })
-            .text(function(d) { return d.text; });
+            .text(function(d) { return d.text; })
+            .on('click', function(d){
+              alert(d.text);
+            });
         }
       });
   </script>
