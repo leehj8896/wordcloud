@@ -95,11 +95,12 @@
               })
             .text(function(d) { return d.text; })
             .on('click', function(d){
-              location.href=get_url(d.text);
+              alert(d.text)
+              // location.href=get_url(d.text);
 
-              function get_url(keyword){
-                return ''
-              }
+              // function get_url(keyword){
+              //   return ''
+              // }
             });
         }
       });
