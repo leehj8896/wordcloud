@@ -31,10 +31,10 @@
 
   <script type="text/javascript">
     var weight = 1/2,   // change me
-        width = 500,
-        height = 500;
+        width = 750,
+        height = 750;
 
-    var fill = d3.scale.category19();
+    var fill = d3.scale.category20();
     d3.csv(
       "words.csv", 
       function(d) {
@@ -45,7 +45,8 @@
       },
       function(data) {
         d3.layout.cloud()
-          .size([width, height]).words(data)
+          .size([width, height])
+          .words(data)
           // .rotate(function() { return ~~(Math.random() * 2) * 90; })
           .rotate(0)
           .font("Impact")
@@ -71,12 +72,13 @@
               })
             .text(function(d) { return d.text; })
             .on('click', function(d){
-              alert(d.text)
+              // alert(d.text)
+              window.open(get_url(d.text));
               // location.href=get_url(d.text);
 
-              // function get_url(keyword){
-              //   return ''
-              // }
+              function get_url(keyword){
+                return 'https://kdx.kr/data/list?search='+keyword
+              }
             });
         }
       });
