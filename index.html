@@ -8,7 +8,11 @@
         stroke: black;
     }
 
-    .title{
+    #content{
+      margin: 60%;
+    }
+
+    #title{
       font-family: 'Roboto', 'NotoSans', sans-serif;
       font-size: 32px;
       font-weight: 500;
@@ -24,10 +28,13 @@
   <script src="d3.layout.cloud.js"></script>
 </head>
 <body>
+  <div id="content">
 
-  <div class="title">여행과 관련된 해시태그</div>
-  <div id="cloud"></div>
-
+    <div id="title">여행과 관련된 해시태그</div>
+    <div id="cloud"></div>
+  
+  </div>
+  
   <script type="text/javascript">
     var weight = 1/2,   // change me
         width = 750,
