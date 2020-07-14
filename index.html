@@ -77,7 +77,7 @@
               // location.href=get_url(d.text);
 
               function get_url(keyword){
-                return 'https://kdx.kr/data/list?search='+encodeURI(keyword)
+                return 'https://kdx.kr/data/list?search='+decodeURI(keyword)
               }
             });
         }
