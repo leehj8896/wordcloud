@@ -4,13 +4,8 @@
   <meta charset="utf-8">
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <style>
-    /* text:hover {
+    text:hover {
         stroke: black;
-    } */
-
-    #cloud{
-      border: 1px solid black;
-      text-align: center;
     }
 
     .title{
@@ -23,6 +18,13 @@
       margin: 0;
       border: 1px solid black;
       text-align: center;
+    }
+
+    #cloud{
+      border: 1px solid black;
+      text-align: center;
+      width: 750;
+      height: 750;
     }
 
   </style>
@@ -78,8 +80,6 @@
             .text(function(d) { return d.text; })
             .on('click', function(d){
               
-              sessionStorage.
-
               window.open(get_url(d.text));
               // location.href=get_url(d.text);
 
