@@ -37,7 +37,7 @@
   <div id="cloud"></div>
 
   <script type="text/javascript">
-    var weight = 1/2,   // change me
+    var weight = 2/3,   // change me
         width = 750,
         height = 750;
 
@@ -65,12 +65,12 @@
           d3.select("#cloud").append("svg")
               .attr("width", width)
               .attr("height", height)
+              .attr("border", '1px solid black')
             .append("g")
               .attr("transform", "translate(" + width/2 + "," + height/2 + ")")
             .selectAll("text")
               .data(words)
             .enter().append("text")
-              .style("border", '1px solid black')
               .style("font-size", function(d) { return d.size + "px"; })
               .style("font-family", "Impact")
               .style("fill", function(d, i) { return fill(i); })
