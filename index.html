@@ -9,28 +9,48 @@
     }
 
     #content{
-      margin: 0px auto;
+      margin-top: 5%;
+      /* margin: 0px auto; */
     }
 
     #title{
       font-family: 'Roboto', 'NotoSans', sans-serif;
-      font-size: 32px;
-      font-weight: 500;
+      font-size: 24px;
+      font-weight: 560;
       color: #231916;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      border-bottom: 1px solid black;
+      /* margin: 0 auto; */
       text-align: center;
+    }
+
+    #description{
+      text-align: center;
+    }
+    #test{
+      margin: 1000;
+    }
+    #underbar{
+      width: 1000px;
+      border-bottom: 2px solid #bbb;
+      margin: 0px auto;
     }
   </style>
   <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
   <script src="d3.layout.cloud.js"></script>
 </head>
 <body>
+
   <div id="content">
 
-    <div id="title">여행과 관련된 해시태그</div>
+    <div id="title">해시태그 단어구름</div>
+    <br>
+    <br>
+    <div id="description">
+      특정 키워드와 관련된 인스타그램 해시태그를 빈도수에 기반하여 시각화한 단어 구름입니다.<br>
+      글자를 클릭하면 해당 글자와 관련된 데이터 상품으로 연결됩니다.
+    </div>
+    <br>
+    <br>
+    <div id="underbar"></div>
     <div id="cloud"></div>
   
   </div>
