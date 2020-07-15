@@ -54,7 +54,7 @@
     <br>
     <div id="description">
       특정 키워드와 관련된 인스타그램 해시태그를 빈도수에 기반하여 시각화한 단어 구름입니다.<br>
-      글자를 클릭하면 해당 글자와 관련된 데이터 상품으로 연결됩니다.
+      단어를 클릭하면 해당 단어와 관련된 데이터 상품으로 연결됩니다.
     </div>
     <br>
     <br>
@@ -71,7 +71,7 @@
 
     var fill = d3.scale.category20();
     d3.csv(
-      "words9.csv", 
+      "words.csv", 
       function(d) {
         return {
           text: d.word,
